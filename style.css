@@ -9,23 +9,25 @@ body {
 	.social-links {
 		margin-top: 10%;
 	}
+	header:first-child {
+		margin-top: 10%;
+	}
 }
 header {
-	margin-left: 5%;
-	margin-bottom:10%;
-	padding: 10px;
+	margin-left: 1%;
+	padding: 5px;
 	display: flex;
 	flex-direction: column;
 }
 header:first-child {
-	margin-top: 10%;
+	margin-top : 1%;
 }
 
 span {
 	position: relative;
 	color:  rgba(94, 95, 12, 1);
 	font-size: 50px;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: 'Trebuchet MS', 'Segoe UI', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 span::after {
