@@ -1,8 +1,21 @@
+body {
+	overflow: hidden;
+}
+
+@media screen and (min-width:700px){
+	header {
+		margin-left : 20%;
+	}
+	.social-links {
+		margin-top: 10%;
+	}
+}
 header {
-	margin-left: 20%;
-	/* background-color: rgba(238, 238, 238, 0.815); */
+	margin-left: 5%;
+	margin-bottom:10%;
 	padding: 10px;
-	/* transform: rotate(-12deg); */
+	display: flex;
+	flex-direction: column;
 }
 header:first-child {
 	margin-top: 10%;
@@ -25,4 +38,33 @@ span::after {
 	width: 25px;
 	height: 70px;
 	border-radius: 2px;
+}
+
+.social-links {
+	margin-top: 20%;
+	text-align: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 20px;
+}
+
+.social-links a {
+	text-decoration: none;
+	color: rgb(112, 114, 9);;
+	text-transform: capitalize;
+	position: relative;
+}
+
+.social-links a::after {
+	content: '';
+	display: block;
+	background-color: rgba(221, 224, 47, 0.6);
+	position: absolute;
+	bottom : 5%;
+	left : 0%;
+	width: 25px;
+	height: 5px;
+}
+
+.social-links a.npm{
+	text-transform: lowercase;
 }
