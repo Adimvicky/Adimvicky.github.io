@@ -1,0 +1,28 @@
+header {
+	margin-left: 20%;
+	/* background-color: rgba(238, 238, 238, 0.815); */
+	padding: 10px;
+	/* transform: rotate(-12deg); */
+}
+header:first-child {
+	margin-top: 10%;
+}
+
+span {
+	position: relative;
+	color:  rgba(94, 95, 12, 1);
+	font-size: 50px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+span::after {
+	content: '';
+	display: block;
+	background-color: rgba(221, 224, 47, 0.6);
+	position: absolute;
+	top : 2%;
+	left : 0%;
+	width: 25px;
+	height: 70px;
+	border-radius: 2px;
+}
