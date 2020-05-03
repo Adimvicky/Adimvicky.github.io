@@ -1,5 +1,6 @@
 body {
 	overflow: hidden;
+	font-family: 'Trebuchet MS', 'Segoe UI', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -13,14 +14,14 @@ header:first-child {
 	margin-top : 1%;
 }
 
-span {
+h1 span {
 	position: relative;
 	color:  rgba(94, 95, 12, 1);
 	font-size: 50px;
-	font-family: 'Trebuchet MS', 'Segoe UI', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-weight: 700;
 }
 
-span::after {
+h1 span::after {
 	content: '';
 	display: block;
 	background-color: rgba(221, 224, 47, 0.6);
@@ -35,7 +36,6 @@ span::after {
 .social-links {
 	margin-top: 20%;
 	text-align: center;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	font-size: 20px;
 }
 
