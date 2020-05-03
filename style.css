@@ -49,18 +49,29 @@ h1 span::after {
 .social-links a::after {
 	content: '';
 	display: block;
-	background-color: rgba(221, 224, 47, 0.6);
+	background-color: rgba(221, 224, 47, 0.5);
 	position: absolute;
 	bottom : 5%;
 	left : 0%;
 	width: 25px;
-	height: 5px;
+	height: 6px;
+	transition: all .2s;
 }
 
 .social-links a.npm{
 	text-transform: lowercase;
 }
-
+.social-links a:hover::after,
+.social-links a:active::after {
+	background-color: rgba(221, 224, 47, 0.7);
+	width: 45px;
+	height: 8px;
+	transform : skewX(30deg);
+}
+.social-links a:active::after {
+	transform : skewX(30deg);
+	transform: scale(1.5);
+}
 @media screen and (min-width:600px){
 	header {
 		margin-left : 10%;
