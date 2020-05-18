@@ -159,7 +159,7 @@ ul {
 .main {
 	background-image:linear-gradient(to right,var(--color-primary),var(--color-primary-light));
 	height: 110vh;
-	padding: 0 4rem;
+	padding: 0 3rem;
 	margin-bottom: 4rem;
 	-webkit-clip-path : polygon(0 0,100% 0,100% 65%,0 100%);
 	clip-path : polygon(0 0,100% 0,100% 65%,0 100%);
@@ -197,7 +197,7 @@ ul {
 	}
 }
 .section-intro {
-	width : 85%;
+	width : 90%;
 	margin : 0 auto;
 	padding: 1rem 0;
 }
@@ -615,12 +615,18 @@ ul {
 	display: flex;
 	justify-content: space-around;
 	transition : all .3s;
+	flex-wrap: wrap;
+	align-content: center;
 }
 
 .customer__logo {
-	width: 10rem;
-	height: 3rem;
+	width: 11rem;
+	height: 4rem;
 }
+
+/* .customer__list .customer:not(:last-child){
+	margin-right: 5rem;
+} */
 @media only screen and (max-width : 40em){
 	.customer__logo {
 		width : 8rem;
