@@ -261,6 +261,10 @@ ul {
 	.header__nav-item:nth-of-type(4){
 		margin-right: 2rem;
 	}
+	.header__nav-item:last-child {
+		display: none;
+	}
+
 }
 
 .header__nav-item:last-child {
