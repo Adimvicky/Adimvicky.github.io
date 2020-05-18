@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/icons-basic.css">
+	<link rel="shortcut icon" href="https://stripe.com/favicon.ico">
+	<title>Stripe Landing page clone</title>
+	<base href="http://127.0.0.1:5500">
+</head>
+<body>
+	<main class="main">
+		<div class="section-intro">
+			<header class="header">
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li class="header__nav-item">
+						 	<a href="/" >
+								<img class="header__nav-logo" src="img/Stripe logo - white.svg" alt="">
+							</a>
+						</li>
+						<li class="header__nav-item"><a class="header__nav-link" href="/" >Products</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="/" >Developers</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="/" >Company</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="/" >Pricing</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="/">Sign in &rarr;</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="announcement">
+				<a href="/" class="announcement__btn">COVID-19 resources ></a>
+			</div>
+
+			<div class="section-pitch">
+				<div class="section-pitch__text">
+					<h1 class="heading-primary">The new standard in online payments</h1>
+					<p class="paragraph">
+						Stripe is the best software platform for running an internet business. We handle billions of dollars every year for forward-thinking businesses around the world.
+					</p>
+					<div class="cta-box">
+						<a href="#" class="btn btn--green">Start now</a>
+						<a href="#" class="btn">contact sales</a>
+					</div>
+				</div>
+				<div class="illustration">
+					<img src="https://stripe.com/img/v3/home/app-illustrations/asana.svg" alt="" class="illustration__image">
+				</div>
+			</div>
+		</div>
+	</main>
+	<div class="section-article">
+		<div class="illustration">
+			<img src="https://stripe.com/img/v3/home/app-illustrations/lyft.svg" alt="" class="illustration__image">
+		</div>
+		<div class="section-article__text">
+			<div class="section-article__text__heading">
+				<div class="icon-box">
+					<i class="icon icon-basic-webpage-txt"></i>
+				</div>
+				<h2 class="heading-secondary">
+					The complete business toolkit for internet business
+				</h 2>
+			</div>
+			<p class="paragraph">
+				Stripe builds the most powerful and flexible tools for internet commerce. Whether you’re creating a subscription service, an on-demand marketplace, an e-commerce store,
+				 or acrowdfunding platform, Stripe’s meticulously designed APIs and
+				unmatched functionality help you create the best possible product for your users. Millions of the world’s most innovative technology companies are scaling faster and more efficiently by building their businesses on Stripe.
+			</p>
+			<a class="link" href="#">Discover how businesses use Stripe &rarr;</a>
+		</div>
+	</div>
+	<div class="section-documentation">
+		<div class="documentation">
+			<div class="documentation__header-text">
+				<div class="icon-box">
+					<i class="icon icon-basic-gear"></i>
+				</div>
+				<h2 class="heading-secondary">
+					Developers first
+				</h2>
+				<p class="paragraph">
+					We believe that payments is a problem rooted in code, not finance. We obsessively seek out elegant, composable abstractions that enable robust, scalable,
+					 flexible integrations. Because we eliminate needless complexity and extraneous details, you
+					can get up and running with Stripe in just a couple of minutes.
+				</p>
+			</div>
+
+			<div class="documentation__runkit-box">
+				<div id="runkit-embed">
+// Require the Stripe library with a test secret key.
+const stripe = require('stripe')('sk_test_BQokikJOvBiI2HlWgH4olfQ2');
+// Create a payment intent to start a purchase flow.
+let paymentIntent = await stripe.paymentIntents.create({
+amount: 2000,
+currency: 'usd',
+description: 'My first payment',
+});
+
+// Complete the payment using a test card.
+paymentIntent = await stripe.paymentIntents.confirm(paymentIntent.id, {
+payment_method: 'pm_card_visa',
+});
+
+// Click “▶ run” to try this code live and create your first payment.
+				</div>
+				<div class="runkit-nav">
+						<ul class="runkit-nav__list">
+							<li class="runkit-nav__item">
+								<a href="" class="link"><i class="icon-basic-postcard-multiple"></i>Payments</a>
+							</li>
+							<li class="runkit-nav__item">
+								<a href="" class="link"><i class="icon-basic-spread-text"></i>Customers</a>
+							</li>
+							<li class="runkit-nav__item">
+								<a href="" class="link"><i class="icon-basic-accelerator"></i>Subscriptions</a>
+							</li>
+							<li class="runkit-nav__item">
+								<a href="" class="link"><i class="icon-basic-webpage-txt"></i>Reporting</a>
+							</li>
+						</ul>
+				<a href="" class="link full-ref">Full API reference &rarr;</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="section-features">
+		<div class="feature feature--2">
+			<div class="feature-box feature-box--1">
+				<div class="icon-box">
+					<i class="icon icon-basic-paperplane"></i>
+				</div>
+				<h2 class="heading-secondary">Always improving</h2>
+				<p class="paragraph">
+					Stripe is an always-improving toolchain that gains new features every month.
+					Our world-class engineering team constantly iterates upon every facet of the
+					Stripe stack. And from Apple Pay to Alipay, building on Stripe means you get early access to the latest technologies.
+				</p>
+				<a href="" class="link">Learn about Stripe's products &rarr;</a>
+			</div>
+		</div>
+
+		<div class="feature feature--2">
+			<div class="feature-box feature-box--2">
+				<div class="icon-box">
+					<i class="icon icon-basic-world"></i>
+				</div>
+				<h2 class="heading-secondary">GLOBAL SCALE</h2>
+				<p class="paragraph">
+					We help power millions of businesses in 100+ countries and across nearly every industry.
+					Headquartered in San Francisco, Stripe has 14 global offices and hundreds of people
+					working to help transform how modern businesses are built and run.
+				</p>
+				<a href="" class="link">More about us &rarr;</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="section-customers">
+		<ul class="customer__list">
+			<li class="customer"><img src="https://stripe.com/img/v3/home/customer-logos/kickstarter.svg" alt="" class="customer__logo"></li>
+			<li class="customer"><img src="https://stripe.com/img/v3/home/customer-logos/instacart.svg" alt="" class="customer__logo"></li>
+			<li class="customer"><img src="https://stripe.com/img/v3/home/customer-logos/bookingcom.svg" alt="" class="customer__logo"></li>
+			<li class="customer"><img src="https://stripe.com/img/v3/home/customer-logos/lyft.svg" alt="" class="customer__logo lyft-logo"></li>
+			<li class="customer"><img src="https://stripe.com/img/v3/home/customer-logos/shopify.svg" alt="" class="customer__logo"></li>
+			<li class="customer"><img src="https://stripe.com/img/v3/home/customer-logos/opentable.svg" alt="" class="customer__logo"></li>
+			<li class="customer"><img src="https://stripe.com/img/v3/home/customer-logos/slack.svg" alt="" class="customer__logo"></li>
+		</ul>
+		<div class="btn-box">
+			<a href="" class="btn btn--blue">see our customers</a>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer__cta">
+			<div class="footer__cta__cards-box">
+				<a class="feature-card">
+					<i class="icon icon-basic-clockwise"></i>
+					<div class="feature-card__text">
+						<h2 class="heading-secondary">recurring payments &rarr;</h2>
+						<p class="paragraph">
+							Send invoices, manage subscriptions and reduce payment
+							declines with Stripe’s recovery tools. Explore Stripe Billing.
+						</p>
+					</div>
+				</a>
+				<a class="feature-card">
+					<i class="icon icon-basic-webpage-multiple"></i>
+					<div class="feature-card__text">
+						<h2 class="heading-secondary">Payments for platforms &rarr;</h2>
+						<p class="paragraph">
+							Stripe Connect gives platforms and marketplaces the tools to easily support
+							multi-party payments and get sellers in 25 countries paid.
+						</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="footer__cta__contact">
+				<div class="footer__cta__contact__text">
+					<h3 class="heading-tertiary">
+						Ready to get started?
+					</h3>
+					<h3 class="heading-tertiary heading-tertiary--black">
+						Get in touch or create an account.
+					</h3>
+				</div>
+				<div class="footer__cta__buttons">
+					<a href="/" class="btn btn--blue">Start now</a>
+					<a href="" class="btn">Contact sales</a>
+				</div>
+			</div>
+		</div>
+		<hr class="hr">
+		<div class="footer-nav">
+			<div class="footer-nav__meta">
+				<ul class="footer-nav__meta-list">
+					<li class="footer-nav__item">
+						<a href="" class="link"> <i class="icon-basic-paperplane"></i> United States</a>
+					</li>
+					<li class="footer-nav__item">
+						<a href="" class="link"><i class="icon-basic-message"></i> English</a>
+					</li>
+					<li class="footer-nav__item copy">&copy; (stripe clone)</li>
+				</ul>
+
+			</div>
+			<div class="footer-nav__main">
+				<div class="footer-nav__column">
+					<ul class="footer-nav__list">
+						<li class="footer-nav__item">
+							<h3>Products</h3>
+						</li>
+						<li class="footer-nav__item"><a href="" class="link">Payments</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Billing</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Connect</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Payouts</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Atlas</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Radar</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Issuing</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Terminal</a></li>
+					</ul>
+				</div>
+				<div class="footer-nav__column">
+					<ul class="footer-nav__list">
+						<li class="footer-nav__item">
+							<h3>Company</h3>
+						</li>
+						<li class="footer-nav__item"><a href="" class="link">About</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Enterprise</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Customers</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Partners</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Partner Program</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Careers</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Blog</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Newsroom</a></li>
+					</ul>
+				</div>
+				<div class="footer-nav__column">
+					<ul class="footer-nav__list">
+						<li class="footer-nav__item">
+							<h3>Developers</h3>
+						</li>
+						<li class="footer-nav__item"><a href="" class="link">API reference</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Documentation</a></li>
+						<li class="footer-nav__item"><a href="" class="link">API Status</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Open Source</a></li>
+					</ul>
+				</div>
+				<div class="footer-nav__column">
+					<ul class="footer-nav__list">
+						<li class="footer-nav__item">
+							<h3>Resources</h3>
+						</li>
+						<li class="footer-nav__item"><a href="" class="link">Covid-19 Resources</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Support</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Connect</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Contact</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Privacy & terms</a></li>
+						<li class="footer-nav__item"><a href="" class="link">Sitemap</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://embed.runkit.com" data-element-id="runkit-embed"></script>
+</body>
+</html>
