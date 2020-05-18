@@ -26,11 +26,12 @@ h1 span::after {
 	display: block;
 	background-color: rgba(221, 224, 47, 0.6);
 	position: absolute;
-	top : 2%;
+	top : 1%;
 	left : 0%;
 	width: 25px;
 	height: 70px;
 	border-radius: 2px;
+	transform : skewX(-15deg);
 }
 
 .social-links {
