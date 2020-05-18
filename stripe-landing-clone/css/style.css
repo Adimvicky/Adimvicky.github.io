@@ -282,10 +282,10 @@ ul {
 	margin-bottom : 4.5rem;
 }
 .announcement__btn {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: 300;
 	border-radius: 100px;
-	padding: .5rem 1rem;
+	padding: .7rem 1.2rem;
 	background-color: var(--color-primary-dark);
 }
 
@@ -606,11 +606,11 @@ ul {
 }
 
 .section-customers {
-	width: 90%;
 	margin : 7rem auto 5rem auto;
 }
 @media only screen and (max-width : 40em){
 	.section-customers {
+		/* width: 99%; */
 		margin : 3rem auto;
 	}
 }
@@ -628,23 +628,19 @@ ul {
 	height: 4rem;
 }
 
-/* .customer__list .customer:not(:last-child){
-	margin-right: 5rem;
-} */
+.customer__list .customer{
+	margin-right: .2rem;
+	margin-left : .2rem
+}
 @media only screen and (max-width : 40em){
 	.customer__logo {
 		width : 8rem;
 	}
 }
 @media only screen and (max-width : 34.5em){
-	.customer__logo {
-		width: 6rem;
-		height: 3rem;
-
-	}
 	.customer__logo.lyft-logo {
 		width: 3rem;
-		height: 3rem;
+		height: 4rem;
 	}
 }
 
