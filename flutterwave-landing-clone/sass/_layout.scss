@@ -1,0 +1,239 @@
+// .layout-container {
+// 	position: relative;
+// }
+section:not([class^="section-intro"]),
+.hero {
+	padding: $section-padding-y-bg $section-padding-x-bg;
+
+	@include respond(desktop){
+		padding: $section-padding-y-md $section-padding-x-md;
+	}
+	@include respond(tablet-port){
+		padding: $section-padding-y-sm $section-padding-x-sm;
+	}
+	@include respond(phone){
+		padding: $section-padding-y-xs $section-padding-x-xs;
+	}
+}
+
+.section-row {
+	display: flex;
+	justify-content: space-between;
+
+
+	@include respond(tablet-port){
+		flex-direction: column;
+	}
+}
+.section-column {
+	flex : 0 0 46%;
+
+	@include respond(desktop){
+		flex : 0 0 48%;
+	}
+	@include respond(tablet-port){
+		margin : 2rem 0;
+	}
+	&-customers {
+		@include respond(tablet-port){
+			margin: 0;
+		}
+	}
+}
+.section-heading {
+	width: 60%;
+	margin : 0 auto;
+	text-align: center;
+	margin-bottom: 6rem;
+
+	@include respond(tablet-port){
+		width: 80%;
+		margin-bottom: 3rem;
+	}
+	@include respond(phone){
+		width: 95%;
+	}
+
+}
+
+.section-illustration {
+	&__image {
+		width: 100%;
+		height: auto;
+		border-radius: 1rem;
+
+		@include respond(tablet-port){
+			display: block;
+			width: 80%;
+			margin : 0 auto;
+		}
+		@include respond(tablet-port){
+			width: 90%;
+		}
+
+	}
+}
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	& > *:not(:only-child) {
+		flex : 0 0 48%;
+	}
+}
+
+.video {
+	width: 100%;
+	height : 100%;
+	display: block;
+
+	@include respond(tablet-port){
+		width: 60%;
+		margin : 0 auto;
+	}
+}
+.section-intro {
+	// height: 100vh;
+	padding-top: 0;
+	background-color: $bg-color;
+}
+
+.section-payments {
+	background-color: $bg-color-light;
+}
+
+.section-security {
+	background-color: $bg-color-light;
+}
+.section-customers {
+	padding: 0 8rem;
+	background-color: $bg-color-light-2;
+	// For the scrolling logos to be on top
+	position: relative;
+	z-index: -20;
+
+	@include respond(phone){
+		padding: 0 4rem;
+	}
+
+	&__text {
+		margin: $section-padding-x-bg 0;
+
+		@include respond(desktop){
+			margin : $section-padding-x-sm 0;
+		}
+	}
+
+}
+
+.section-cta {
+	text-align: center;
+}
+
+.contact-buttons-box {
+	// display: flex;
+	// flex-wrap: wrap;
+	// justify-content: flex-start;
+	// align-items: center;
+	.btn:first-child {
+		margin-right: 1.5rem;
+	}
+	@include respond(20.625em){
+		.btn:first-child {
+			margin : 1rem 0;
+		}
+	}
+}
+
+.hero {
+	// padding: 10rem 0;
+	display: flex;
+
+	@include respond(tablet-port){
+		flex-direction: column;
+	}
+	@include respond(tablet-port){
+		&__text {
+			width: 90%;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__illus {
+		flex : 0 0 60%;
+		padding-left: 5rem;
+
+		@include respond(tablet-port){
+			padding: 0;
+		}
+
+		&-box {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+		}
+		&__figure {
+			margin: 1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+		}
+		&__figure {
+			justify-content: flex-end;
+
+			margin: 1rem;
+			// @include respond(22.5em) {
+			// 	justify-content: flex-start;
+			// }
+
+			&:nth-of-type(1){
+				max-width: 40%;
+				@include respond(22.5em) {
+					max-width: 36%;
+				}
+			}
+			&:nth-of-type(2){
+				max-width: 50%;
+				@include respond(22.5em) {
+					max-width: 43%;
+				}
+			}
+			&:nth-of-type(3){
+				max-width: 45%;
+				@include respond(22.5em) {
+					max-width: 42%;
+				}
+			}
+			&:nth-of-type(4) {
+				max-width: 45%;
+				& > img {
+					height: 100%;
+					border-radius: .5rem;
+				}
+				@include respond(22.5em){
+					max-width: 42%;
+				}
+			}
+		}
+		&__image {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+
+.footer {
+	padding: 5rem $section-padding-x-bg 3rem $section-padding-x-bg;
+
+	@include respond(desktop){
+		padding: 2.5rem $section-padding-x-md 2rem $section-padding-y-md;
+	}
+	@include respond(tablet-port){
+		padding: 1.5rem $section-padding-x-sm 1rem $section-padding-y-sm;
+	}
+	@include respond(phone){
+		padding: 1.2rem;
+	}
+}

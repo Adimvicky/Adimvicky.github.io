@@ -1,0 +1,156 @@
+// VARIABLES
+$color-primary : #f5a623;
+$color-secondary : #0f1c70;
+$color-tertiary : #1d222c;
+$color-tertiary-light-1 : #333;
+$color-tertiary-light-2 : #4f4f4f;
+$bg-color : #dadef5;
+$bg-color-light : #f4f6f8;
+$bg-color-light-2 : #fafafa;
+$section-padding-y-bg : 10rem;
+$section-padding-x-bg : 8rem;
+$section-padding-y-md : 8rem;
+$section-padding-x-md : 6rem;
+$section-padding-y-sm : 6rem;
+$section-padding-x-sm : 4rem;
+$section-padding-y-xs : 4rem;
+$section-padding-x-xs : 2rem;
+
+// BREAKING POINTS
+$bp-largest : 68.75em; // 1100px/16
+
+
+/// MIXINS
+@mixin respond($breakpoint){
+	@if $breakpoint == desktop {
+		@media only screen and (max-width : 68.75em){
+			@content;
+		}
+	}
+	@if $breakpoint == tablet-land {
+		@media only screen and (max-width : 56.25em){
+			@content;
+		}
+	}
+	@if $breakpoint == tablet-port {
+		@media only screen and(max-width : 48.125em){
+			@content;
+		}
+	}
+	@if $breakpoint == phone {
+		@media only screen and (max-width : 37.5em){
+			@content;
+		}
+	}
+	@else {
+		@media only screen and (max-width : $breakpoint){
+			@content;
+		}
+	}
+}
+
+// RESETS AND GENERAL STYLING
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
+
+	@include respond(tablet-land){
+		font-size: 55%;
+	}
+	@include respond(phone){
+		font-size: 50%;
+	}
+}
+body {
+	box-sizing: border-box;
+	font-size: 1.5rem;
+	font-family: 'Open Sans','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color : $color-tertiary;
+}
+a {
+	text-decoration: none;
+	color : inherit;
+}
+ul {
+	list-style: none;
+}
+
+
+
+// UTILITIES
+.u-mb-sm {
+	margin-bottom: 1rem;
+}
+.u-mb-md {
+	margin-bottom: 2rem;
+}
+.u-mb-bg {
+	margin-bottom: 4rem;
+}
+.u-mt-sm {
+	margin-top: 1rem;
+}
+.u-mt-md {
+	margin-top: 2rem;
+}
+.u-mt-bg {
+	margin-top: 4rem;
+}
+.u-mx-sm {
+	margin:0 1rem;
+}
+.u-mx-md {
+	margin:0 2rem;
+}
+.u-mx-bg {
+	margin:0 4rem;
+}
+.u-my-sm {
+	margin:1rem 0;
+}
+.u-my-md {
+	margin:2rem 0;
+}
+.u-my-bg {
+	margin:4rem 0;
+}
+.u-mr-sm {
+	margin-right: 1rem;
+}
+.u-mr-md {
+	margin-right: 2rem;
+}
+.u-mr-bg {
+	margin-right: 4rem;
+}
+.u-ml-sm {
+	margin-left: 1rem;
+}
+.u-ml-md {
+	margin-left: 2rem;
+}
+.u-ml-bg {
+	margin-left: 4rem;
+}
+
+
+
+/// ANIMATIONS
+
+@keyframes scroll {
+	0% {
+		transform : translateY(0);
+	}
+	50% {
+		transform : translateY(-50%);
+	}
+	100% {
+		transform : translateY(-100%);
+	}
+}

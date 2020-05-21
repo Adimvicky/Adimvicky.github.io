@@ -1,0 +1,470 @@
+.header {
+	font-size: 1.5rem;
+
+	&--main {
+		padding: 3rem 4rem;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include respond(31.25em){
+			padding: 1.5rem 2rem;
+		}
+
+		&__nav {
+			text-transform: capitalize;
+			flex : 0 0 70%;
+
+			@include respond(tablet-port){
+				display: none;
+			}
+
+			&__list {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			&__item {
+
+			}
+			&__link {
+				&:hover {
+					color : $color-primary;
+				}
+			}
+		}
+
+	}
+
+	&--sticky {
+		position : fixed;
+		opacity: 0;
+		visibility: hidden;
+		transition: all .2s;
+
+		padding: 1.5rem 3.5rem;
+		background-color: rgba(245,246,248,.8);
+
+		@include respond(31.25em){
+			padding: 1.5rem 2rem;
+		}
+
+		&__nav {
+			display: flex;
+			justify-content: space-between;
+
+			&__toggler {
+				z-index: 20;
+
+				&--1 {
+					@media only screen and (min-width : 48.125em){
+						display: none;
+					}
+				}
+			}
+			&__toggler-checkbox {
+				visibility: hidden;
+				opacity: 0;
+				& + label {
+					cursor: pointer;
+				}
+			}
+			&__toggler-button,
+			&__toggler-button::after,
+			&__toggler-button::before {
+				background-color: #111;
+				width: 2.5rem;
+				height: .3rem;
+				border-radius: .3rem;
+				display: inline-block;
+				transition: all .2s ease;
+			}
+			&__toggler-button {
+				position: relative;
+				cursor: pointer;
+			}
+			&__toggler-button::before,
+			&__toggler-button::after {
+				content: "";
+				position: absolute;
+			}
+			&__toggler-button::after {
+				top : -.8rem;
+			}
+			&__toggler-button::before {
+				top: .8rem;
+			}
+
+			&__toggler-checkbox:checked {
+				& + .header--sticky__nav__toggler-label
+					.header--sticky__nav__toggler-button {
+						background-color: transparent;
+						transform-origin: center;
+						&::after {
+							top : 0;
+							transform : rotate(-135deg);
+						}
+						&::before {
+							top : 0;
+							transform : rotate(135deg);
+						}
+				}
+			}
+
+			&__list {
+				position: fixed;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				z-index: 10;
+				visibility: hidden;
+				opacity: 0;
+				transition: all .3s;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				font-size: 2rem;
+				font-weight: 600;
+				background-color: rgba(245,246,248,.96);
+				padding: 3rem 0;
+			}
+			&__link:hover {
+				color: $color-primary;
+			}
+		}
+	}
+
+}
+
+// OVERLAY MENU UTIL CLASSES
+.sticky {
+	position: fixed;
+	top : 0;
+	width: 100%;
+	visibility: visible;
+	opacity: 1;
+}
+.open-overlay-menu {
+	opacity : 1;
+	visibility: visible;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+
+
+
+// BUTTONS
+.btn {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	padding: 1.2rem 2rem;
+	box-shadow: 0 .5rem .5rem rgba(0,0,0,.1);
+	border-radius: .5rem;
+	font-weight: 600;
+	display: inline-flex;
+	justify-content: space-between;
+	transition: all .2s;
+
+	&--primary {
+		color : #fff;
+		background-color: $color-primary;
+	}
+	&--secondary {
+		color : $color-tertiary;
+		background-color: #fff;
+	}
+
+	span:last-child {
+		margin-left: .6rem;
+		margin-top: -.1rem;
+	}
+	&:hover {
+		transform : translateY(-2px);
+		box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+	}
+	&:active {
+		transform: translateY(-1px);
+	}
+}
+
+// Logo
+.logo-box {
+	display: flex;
+	align-items: center;
+}
+.logo {
+	width: 18rem;
+	height: 3rem;
+
+	@include respond(phone){
+		width: 15rem;
+		height: 3rem;
+	}
+}
+
+// TYPOGRAPHY
+.heading-primary {
+	font-size: 3.5rem;
+	font-weight: 700;
+	color : $color-secondary;
+
+	&--bg {
+		font-size: 4.8rem;
+		font-weight: 700;
+		color : $color-secondary;
+	}
+}
+.heading-secondary {
+	font-size: 3.6rem;
+	font-weight: 600;
+	color : $color-tertiary;
+}
+.heading-tertiary {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color : $color-secondary;
+}
+
+.paragraph-1 {
+	font-size: 2.5rem;
+	color : $color-tertiary-light-1;
+}
+.paragraph-2 {
+	font-size: 1.8rem;
+	color: $color-tertiary-light-1;
+}
+.paragraph-3 {
+	font-size: 1.6rem;
+	color: $color-tertiary-light-1;
+	line-height: 2.3rem;
+}
+
+.checklist {
+	font-size: 1.6rem;
+	color : $color-tertiary-light-2;
+
+	&__item {
+		position: relative;
+		margin-left: 16%;
+	}
+	&__item::before{
+		content : "";
+		position: absolute;
+		top : 0;
+		left : -16%;
+		width: 2.4rem;
+		height: 2.4rem;
+		background-image: url(https://flutterwave.com/images/icons/check.svg);
+		background-repeat: no-repeat;
+		background-size: 1.2rem;
+		background-position: center;
+		border-radius: 100%;
+		background-color: rgba($color-secondary,.3);
+
+		@include respond(22em){
+			width : 2.2rem;
+			height: 2.2rem;
+			background-size: 1.05rem;
+		}
+	}
+	&__item:not(:last-child) {
+		margin-bottom : 2.3rem;
+	}
+}
+
+.link {
+		text-transform: uppercase;
+		font-size: 1.3rem;
+		font-weight: 600;
+		transition: all .2s;
+		border-bottom: 1.3px solid currentColor;
+		cursor: pointer;
+
+	&--primary {
+		color : $color-primary;
+	}
+	&:hover {
+		filter : brightness(90%);
+	}
+}
+
+//// Customers (company grid)
+
+.companies {
+	&__container-grid {
+		height: 60rem;
+		overflow: hidden;
+
+		@include respond(tablet-port){
+			height: 30rem;
+		}
+	}
+
+	&__grid {
+		display: flex;
+		flex-wrap: wrap;
+		animation : scroll 30s linear infinite;
+		animation-play-state: running;
+		animation-fill-mode: initial;
+		animation-delay: 0s;
+		position: relative;
+		z-index: -10;
+	}
+
+	&__logo-box {
+		// display: inline-block;
+		flex : 0 0 calc(33.33% - 4rem);
+		height: 8rem;
+		width: 14rem;
+		padding : 1rem 1.5rem;
+		margin: 2rem;
+		box-shadow: 0 .2rem 1rem rgba(0,0,0,.15);
+		background-color: $bg-color-light;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include respond(phone){
+			height: 7rem;
+			width: 10rem;
+			padding: .8rem 1.2rem;
+		}
+
+	}
+
+	&__logo {
+		width: 7rem;
+		height: 10rem;
+
+		@include respond(phone){
+			height: 4rem;
+			width: 5rem;
+		}
+	}
+}
+
+
+.footer {
+	text-transform: capitalize;
+	font-size: 1.4rem;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+
+		@include respond(tablet-port){
+			flex-direction: column;
+		}
+	}
+	&__location {
+		margin-right: 2rem;
+
+		& > .footer__column {
+			@include respond(phone){
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+	}
+	&__country {
+		display: flex;
+		align-items: center;
+
+		&__flag {
+			margin-right: 1rem;
+		}
+	}
+	&__links {
+		flex : 0 1 80%;
+
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+	&__column {
+		flex : 0 0 20%;
+
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1.5rem;
+		margin-right: 1.5rem;
+
+		& > * {
+			margin-bottom: 1.5rem;
+		}
+		&__header {
+			text-transform: uppercase;
+		}
+		&__link {
+			&:hover {
+				color : #000;
+			}
+		}
+		&__email {
+			color: $color-secondary;
+			text-transform: lowercase;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include respond(phone){
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+	}
+
+	&__social-links {
+		display: flex;
+
+		& > *:not(:last-child) {
+			margin-right: 2rem;
+			@include respond(phone){
+				margin-right: 1rem;
+			}
+		}
+		& > * {
+			@include respond(phone){
+				margin-top: 1rem;
+			}
+		}
+
+	}
+}
+
+.virtual-assistant-button {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	height: 6rem;
+	width: 6rem;
+	border-radius: 50%;
+	background-color: $color-primary;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+	transition: all .2s;
+	cursor: pointer;
+	z-index: 30;
+
+	&__icon {
+		font-size: 3rem;
+		color: #fff;
+		line-height: 0;
+	}
+	&:hover {
+		transform: translateY(-2px);
+	}
+}
