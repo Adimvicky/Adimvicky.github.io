@@ -1,0 +1,142 @@
+// Variables
+$color-primary : #222;
+$color-primary-light : #1a293f;
+$color-secondary : #2a7bf3;
+$color-secondary-dark : #0f63e0;
+$color-tertiary : #ff4e4a;
+$color-tertiary-dark : #f82824;
+
+$section-margin-y-bg : 25rem;
+$section-margin-x-bg : 8rem;
+
+$pattern-background : url(https://issoco.com/media/main/pattern.svg);
+
+// MIXINS
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == desktop {
+		@media only screen and (max-width:62.5em) {
+			@content;
+		}
+	}
+	@if $breakpoint == tab-land {
+		@media only screen and (max-width:56.25em) {
+			@content;
+		}
+	}
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width:42em) {
+			@content;
+		}
+	}
+	@if $breakpoint == phone {
+		@media only screen and (max-width:30em) {
+			@content;
+		}
+	}
+	@if $breakpoint == phone-sm {
+		@media only screen and (max-width:25em) {
+			@content;
+		}
+	}
+}
+
+
+// Basic reset
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
+
+	@include respond(tab-port){
+		font-size: 58%;
+	}
+	@include respond(phone){
+		font-size: 55%;
+	}
+}
+body {
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro',sans-serif;
+	color: $color-primary;
+}
+a {
+	text-decoration: none;
+	color: $color-primary-light;
+}
+ul {
+	list-style: none;
+}
+
+
+
+
+// UTILITIES
+.d-flex-row {
+	display: flex;
+	align-items : center;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.u-my-bg {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+.u-mx-bg {
+	margin-right: 4rem;
+	margin-right: 4rem;
+}
+.u-my-md {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.u-mx-md {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.u-mr-bg {
+	margin-right: 4rem;
+}
+.u-mr-md {
+	margin-right: 2rem;
+}
+.u-mr-sm {
+	margin-right: 1rem;
+}
+.u-ml-bg {
+	margin-left: 4rem;
+}
+.u-ml-md {
+	margin-left: 2rem;
+}
+.u-ml-sm {
+	margin-left: 1rem;
+}
+.u-mt-bg {
+	margin-top: 4rem;
+}
+.u-mt-md {
+	margin-top: 2rem;
+}
+.u-mt-sm {
+	margin-top: 1rem;
+}
+.u-mb-bg {
+	margin-bottom: 4rem;
+}
+.u-mb-md {
+	margin-bottom: 2rem;
+}
+.u-mb-sm {
+	margin-bottom: 1rem;
+}
+
+

@@ -1,0 +1,347 @@
+.layout-container {
+	background-image: url(https://issoco.com/media/main/pattern.svg);
+	overflow-x : hidden;
+}
+
+section {
+	margin: $section-margin-y-bg $section-margin-x-bg;
+
+	@include respond(desktop){
+		margin : 20rem 5rem;
+	}
+	@include respond(tab-port){
+		margin : 10rem 2rem;
+	}
+
+}
+
+.section-intro {
+	margin: 7rem 8rem 12rem 8rem;
+	position: relative;
+	@include respond(tab-land){
+		margin: 7rem 2rem 12rem 2rem;
+	}
+
+	&__container {
+		width: 65%;
+		margin: 10rem auto 15rem auto;
+
+		@include respond(desktop){
+			width: 90%;
+			margin: 5rem auto 10rem auto;
+		}
+
+		.heading {
+			position: relative;
+			z-index: 20;
+		}
+	}
+	&__bottom {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		@include respond(tab-port){
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.btn {
+			margin-left: 4rem;
+			@include respond(tab-port){
+				margin : 4rem 0 0 0;
+			}
+		}
+	}
+
+}
+
+.section-services {
+	height: 55rem;
+	position: relative;
+
+
+	&__content {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		position: relative;
+
+		.heading {
+			margin-left: 10rem;
+			@include respond(tab-port){
+				margin-left: 1.5rem;
+			}
+		}
+		.paragraph {
+			margin-left: 10rem;
+			z-index: 60;
+
+			@include respond(tab-port){
+				margin-left: 1.5rem;
+			}
+		}
+	}
+	.link {
+		@include respond(phone){
+			margin-left: 4rem;
+		}
+	}
+	&__illustration {
+		position: absolute;
+		top : 5rem;
+		right : 15rem;
+
+		@include respond(desktop){
+			right: 5rem;
+		}
+		@include respond(tab-land){
+			right: -20rem;
+		}
+		@include respond(phone){
+			right: -25rem;
+		}
+		@include respond(phone){
+			right: -30rem;
+		}
+
+
+		&--1 {
+			transform: rotate(30deg);
+			z-index: 50;
+			position: relative;
+			box-shadow: 1.5rem 1.5rem 2rem rgba(0,0,0,.1);
+
+			@include respond(tab-land){
+				transform : rotate(20deg);
+			}
+
+			&:hover {
+				box-shadow: 1.5rem 1.5rem 1rem rgba(0,0,0,.1);
+				transform: rotate(30deg) translateY(-2px) scale(1.005);
+				@include respond(tab-land){
+					transform : rotate(20deg) translateY(-2px) scale(1.005);
+				}
+			}
+		}
+		&--2,
+		&--3 {
+			height: 45.3rem;
+			width: 25.3rem;
+			background-color: #fff;
+			box-shadow: 1.5rem 1.5rem 2rem rgba(0,0,0,.1);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&--2 {
+			z-index: 40;
+			transform: rotate(40deg);
+			@include respond(tab-land){
+				transform: rotate(30deg);
+			}
+		}
+		&--3 {
+			z-index: 30;
+			transform: rotate(45deg);
+			@include respond(tab-land){
+				transform: rotate(35deg);
+			}
+		}
+	}
+}
+
+.section-technologies {
+	display: flex;
+	justify-content: space-between;
+
+	@include respond(desktop){
+		flex-direction: column;
+		align-items: center;
+	}
+	&__content {
+		flex : 0 0 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		position: relative;
+		margin-left: 10rem;
+
+		@include respond(desktop){
+			margin-left: 5rem;
+		}
+		@include respond(tab-port){
+			margin-left: 3rem;
+		}
+
+		& > * {
+			z-index: 20;
+			margin-left: 5rem;
+			@include respond(tab-port){
+				margin-left : 0;
+			}
+		}
+		&::before {
+			content : "";
+			position: absolute;
+			left: -10rem;
+			bottom: 2rem;
+			width: 25rem;
+			height:40rem;
+			background-color: $color-tertiary;
+			z-index: 10;
+			clip-path: polygon(0 0,100% 50%,0 100%,0 75%,50% 50%,0 25%,0 0);
+
+			@include respond(desktop){
+				left: -15rem;
+				width: 15rem;
+			}
+			@include respond(tab-port){
+				bottom: -10rem;
+				left: -20rem;
+			}
+
+		}
+	}
+	&__illustrations {
+		height: 100%;
+
+		@include respond(desktop){
+			margin-top: 5rem;
+		}
+
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		@include respond(desktop){
+			justify-content: center;
+		}
+
+		&-item {
+			margin-right: 4rem;
+			margin-bottom: 2rem;
+
+			&__img {
+				@include respond(tab-port){
+					width: 4.5rem;
+					height: 4.5rem;
+				}
+				@include respond(phone-sm){
+					width: 3.5rem;
+					height: 3.5rem;
+				}
+			}
+		}
+
+	}
+}
+
+.section-team {
+	position: relative;
+	height: 60rem;
+
+	@include respond(desktop){
+		height: 55rem;
+	}
+	@include respond(tab-port){
+		.section-background {
+			width: 100%;
+		}
+	}
+	&__container {
+	}
+	&__content {
+		// height: 100%;
+		width: 50%;
+		margin: 10rem 0 10rem 40%;
+		@include respond(tab-land){
+			width: 70%;
+			margin: 7rem 0 7rem 30%;
+		}
+		@include respond(tab-port){
+			width: 80%;
+			margin: 7rem 0 7rem 25%;
+		}
+		@include respond(phone-sm){
+			width: 90%;
+			margin: 6rem 0 6rem 5%;
+		}
+		& > .link {
+			margin-top: 3rem;
+			width: max-content;
+			@include respond(phone){
+				margin-left: 3rem;
+			}
+		}
+		.heading-secondary {
+			margin-left: -2rem;
+		}
+	}
+	&__illustration {
+		position: absolute;
+		left: -17rem;
+		top: 5rem;
+		@include respond(tab-land){
+			left: -30rem;
+		}
+		@include respond(tab-port){
+			left : -35rem;
+		}
+		@include respond(tab-port){
+			left : -44rem;
+		}
+
+
+		&-image {
+			border-radius: 3px;
+		}
+	}
+}
+
+.section-customers {
+	height: 60rem;
+
+
+	.section-background {
+		box-shadow: 1rem 1.5rem 1rem 1rem rgba(0,0,0,.1);
+		padding-bottom: 4rem;
+
+		@include respond(phone-sm){
+			width: 100%;
+		}
+	}
+	&__content {
+		margin: 15rem auto;
+
+		@include respond(desktop){
+			margin: 20rem auto;
+		}
+
+		& > * {
+			position: relative;
+			z-index: 20;
+			margin-left : 20rem;
+			@include respond(desktop){
+				margin-left: 10rem;
+			}
+			@include respond(tab-port){
+				margin-left : 1rem;
+			}
+
+		}
+
+	}
+	.bg-text {
+		position: absolute;
+		top : 5rem;
+		left: -11rem;
+		z-index: 10;
+		@include respond(tab-port){
+			left: 0;
+		}
+	}
+}
